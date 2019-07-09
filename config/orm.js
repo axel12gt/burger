@@ -8,6 +8,8 @@ var orm = {
 
     },
     updateOne: function(){
-        
+
     }
 }
+
+module.exports = orm

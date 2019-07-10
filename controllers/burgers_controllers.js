@@ -58,4 +58,5 @@ router.delete("/api/burgers", function(req,res){
     })
 })
 
+// exports router with all it's new methods for client side handlebars
 module.exports = router

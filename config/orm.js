@@ -75,7 +75,7 @@ var orm = {
         console.log(queryString)
         connection.query(queryString, function (err, res) {
             if (err) throw err
-            cb(result)
+            cb(res)
         })
     },
     // deletes from the table

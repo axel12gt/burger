@@ -9,7 +9,7 @@ router.get("/", function(req,res){
         var hbsObject = {
             burgers: data
         }
-        console.log(hbsObject)
+        console.log('this is the data', hbsObject)
         res.render("index", hbsObject)
     })
 })
@@ -31,6 +31,8 @@ router.put("/api/burgers/:id", function(req, res){
     // sets up a condition
     var condition = "id = " + req.params.id
     console.log("condition: ", condition)
+    console.log(req.body.devoured);
+    
     // connects to burger.update method and sends thru info from client side
     burger.update({
         devoured: req.body.devoured

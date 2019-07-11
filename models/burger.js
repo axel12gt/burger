@@ -17,8 +17,10 @@ var burger = {
     },
     // connects to the orm and updates the table values
     update: function(objColVals, condition, cb){
-        orm.updateOne("burgers", objColVals, condition, cb)
-        cb(res)
+        orm.updateOne("burgers", objColVals, condition, function(res){
+            cb(res)
+        })
+     
     },
     // connects to the orm and deletes the data from the table
     delete: function(condition, cb){

@@ -1,7 +1,10 @@
 $(function () {
     $(".change-state").on("click", function (event) {
+        // event.preventDefault()
+        console.log("clicked")
         var id = $(this).data("id")
-        var newDevoured = $(this).data("newDevoured")
+        var newDevoured = $(this).attr("data-new")
+        console.log(newDevoured)
 
         var newState = {
             devoured: newDevoured
